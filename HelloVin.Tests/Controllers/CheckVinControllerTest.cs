@@ -14,7 +14,20 @@ namespace HelloVin.Tests.Controllers
     public class CheckVinControllerTest
     {
         [TestMethod]
-        public void GetByVin()
+        public void GetByCorrectVin()
+        {
+            // Arrange
+            CheckVinController controller = new CheckVinController();
+
+            // Act
+            string result = controller.Get("12345678901234567");
+
+            // Assert
+            Assert.AreEqual("Ok", result);
+        }
+
+        [TestMethod]
+        public void GetByIncorrectVin()
         {
             // Arrange
             CheckVinController controller = new CheckVinController();
