@@ -23,7 +23,7 @@ namespace HelloVin.Tests.Controllers
             string result = controller.Get("12345678901234567");
 
             // Assert
-            Assert.AreEqual("Ok!", result);
+            Assert.AreEqual("Ok!!", result);
         }
 
         [TestMethod]
