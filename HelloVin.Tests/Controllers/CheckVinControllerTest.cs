@@ -36,7 +36,7 @@ namespace HelloVin.Tests.Controllers
             string result = controller.Get("123");
 
             // Assert
-            Assert.AreEqual("Not ok", result);
+            Assert.AreEqual("Not ok!", result);
         }
     }
 }
