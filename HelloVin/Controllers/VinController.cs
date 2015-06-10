@@ -12,7 +12,7 @@ namespace HelloVin.Controllers
         // GET api/vin
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "YS298765432123456", "YS298765432123457" };
         }
 
         // GET api/vin/5
