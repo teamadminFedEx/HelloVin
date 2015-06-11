@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using HelloVin.Models;
+using HelloVin.Interfaces;
 
 namespace HelloVin.Controllers
 {
@@ -12,8 +14,12 @@ namespace HelloVin.Controllers
         // GET api/checkvin/id
         public string Get(string id)
         {
-            if (id.Length == 17) return "Ok!!";
-            else return "Not ok!";
+            IVinChecker checker = new VinChecker(new List<IVinRule> 
+                 { 
+                     new VinLengthRule() 
+                 });
+
+            return checker.Check(id);
         }
     }
 }
