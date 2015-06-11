@@ -8,11 +8,6 @@ namespace HelloVin.Tests.Controllers
     [TestFixture]
     public class ValuesControllerTest
     {
-        [Test]
-        public void This_ShouldFail()
-        {
-            Assert.Fail("hehe!!!!!");
-        }
 
         [Test]
         public void Get()
