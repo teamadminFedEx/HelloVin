@@ -201,6 +201,7 @@
     <Compile Include="Models\DataContract\CheckResultResponse.cs" />
     <Compile Include="Interfaces\IVinChecker.cs" />
     <Compile Include="Interfaces\IVinRule.cs" />
+    <Compile Include="Models\Enums\VehicleManufacturer.cs" />
     <Compile Include="Models\VinLengthRule.cs" />
     <Compile Include="Models\VinChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
