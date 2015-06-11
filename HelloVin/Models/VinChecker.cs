@@ -22,7 +22,7 @@ namespace HelloVin.Models
             // Check each rule in the rule list
              bool result = _vinRules.All(x => x.Check(vin));
 
-             if (result) return ("Ok!!");
+             if (result) return ("Very Ok!!");
              else return ("Not Ok!");
          } 
     }
