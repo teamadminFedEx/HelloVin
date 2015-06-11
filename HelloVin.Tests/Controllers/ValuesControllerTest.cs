@@ -24,9 +24,10 @@ namespace HelloVin.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(2, result.Count());
+            Assert.AreEqual(3, result.Count());
             Assert.AreEqual("value1", result.ElementAt(0));
             Assert.AreEqual("value2", result.ElementAt(1));
+            Assert.AreEqual("A_New_Value", result.ElementAt(2));
         }
 
         [TestMethod]
@@ -35,11 +36,13 @@ namespace HelloVin.Tests.Controllers
             // Arrange
             ValuesController controller = new ValuesController();
 
+            const int Id = 5;
+
             // Act
-            string result = controller.Get(5);
+            string result = controller.Get(Id);
 
             // Assert
-            Assert.AreEqual("value", result);
+            Assert.AreEqual("value: " + Id, result);
         }
 
         [TestMethod]
