@@ -14,7 +14,7 @@ namespace HelloVin.Models
 
         public bool Check(string vin)
         {
-            return vin.Length == 16;
+            return vin.Length == 17;
         }
  
     }
