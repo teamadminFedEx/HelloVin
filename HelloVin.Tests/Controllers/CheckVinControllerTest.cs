@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Web.Http;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HelloVin;
-using HelloVin.Controllers;
+﻿using HelloVin.Controllers;
+using HelloVin.Models.DataContract;
+using NUnit.Framework;
 
 namespace HelloVin.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class CheckVinControllerTest
     {
-        [TestMethod]
+        [Test]
         public void GetByCorrectVin()
         {
             // Arrange
@@ -23,10 +17,10 @@ namespace HelloVin.Tests.Controllers
             var result = controller.Get("12345678901234567");
 
             // Assert
-            Assert.AreEqual("Ok!!", result);
+            Assert.AreEqual(CheckResult.Ok, result.CheckResult);
         }
 
-        [TestMethod]
+        [Test]
         public void GetByIncorrectVin()
         {
             // Arrange
@@ -36,7 +30,7 @@ namespace HelloVin.Tests.Controllers
             var result = controller.Get("123");
 
             // Assert
-            Assert.AreEqual("Not Ok!", result);
+            Assert.AreEqual(CheckResult.Failed, result.CheckResult);
         }
     }
 }

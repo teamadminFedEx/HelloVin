@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Web.Http;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HelloVin;
 using HelloVin.Controllers;
+using NUnit.Framework;
 
 namespace HelloVin.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class ValuesControllerTest
     {
-        [TestMethod]
+        [Test]
         public void Get()
         {
             // Arrange
@@ -30,7 +25,7 @@ namespace HelloVin.Tests.Controllers
             Assert.AreEqual("A_New_Value", result.ElementAt(2));
         }
 
-        [TestMethod]
+        [Test]
         public void GetById()
         {
             // Arrange
@@ -45,7 +40,7 @@ namespace HelloVin.Tests.Controllers
             Assert.AreEqual("value: " + Id, result);
         }
 
-        [TestMethod]
+        [Test]
         public void Post()
         {
             // Arrange
@@ -57,7 +52,7 @@ namespace HelloVin.Tests.Controllers
             // Assert
         }
 
-        [TestMethod]
+        [Test]
         public void Put()
         {
             // Arrange
@@ -69,7 +64,7 @@ namespace HelloVin.Tests.Controllers
             // Assert
         }
 
-        [TestMethod]
+        [Test]
         public void Delete()
         {
             // Arrange

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HelloVin;
-using HelloVin.Models;
+﻿using System.Collections.Generic;
 using HelloVin.Interfaces;
+using HelloVin.Models;
+using HelloVin.Models.DataContract;
+using NUnit.Framework;
 
 namespace HelloVin.Tests.Models
 {
-    [TestClass]
+    [TestFixture]
     public class VinCheckerTest
     {
-        [TestMethod]
+        [Test]
         public void TestCheckVinLength()
         {
             // Arrange
@@ -24,7 +23,7 @@ namespace HelloVin.Tests.Models
             var result = checker.Check("12345678901234567");
 
             // Assert
-            Assert.AreEqual("Ok!!", result);
+            Assert.AreEqual(CheckResult.Ok, result.CheckResult);
         }
     }
 }
