@@ -9,6 +9,12 @@ namespace HelloVin.Tests.Controllers
     public class ValuesControllerTest
     {
         [Test]
+        public void This_ShouldFail()
+        {
+            Assert.Fail("hehe!!!!!");
+        }
+
+        [Test]
         public void Get()
         {
             // Arrange
