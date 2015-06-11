@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using HelloVin.Interfaces;
+using HelloVin.Models.DataContract;
 
 namespace HelloVin.Models
 {
@@ -16,14 +17,23 @@ namespace HelloVin.Models
          } 
  
  
-         public string Check(string vin) 
+         public CheckResultResponse Check(string vin) 
          {
 
             // Check each rule in the rule list
              bool result = _vinRules.All(x => x.Check(vin));
 
-             if (result) return ("Ok!!");
-             else return ("Not Ok!");
+             var response = new CheckResultResponse();
+
+             if (result)
+             {
+                 response.CheckResult = CheckResult.Ok;
+             }
+             else 
+             {
+                 response.CheckResult = CheckResult.Failed;
+             }
+             return response;
          } 
     }
 }

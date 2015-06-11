@@ -166,6 +166,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataContract\CheckResult.cs" />
+    <Compile Include="Models\DataContract\CheckResultResponse.cs" />
     <Compile Include="Interfaces\IVinChecker.cs" />
     <Compile Include="Interfaces\IVinRule.cs" />
     <Compile Include="Models\VinLengthRule.cs" />

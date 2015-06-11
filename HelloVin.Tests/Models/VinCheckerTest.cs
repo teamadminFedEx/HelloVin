@@ -21,7 +21,7 @@ namespace HelloVin.Tests.Models
             );
 
             // Act
-            string result = checker.Check("12345678901234567");
+            var result = checker.Check("12345678901234567");
 
             // Assert
             Assert.AreEqual("Ok!!", result);

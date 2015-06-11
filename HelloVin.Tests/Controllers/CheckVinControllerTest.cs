@@ -20,7 +20,7 @@ namespace HelloVin.Tests.Controllers
             CheckVinController controller = new CheckVinController();
 
             // Act
-            string result = controller.Get("12345678901234567");
+            var result = controller.Get("12345678901234567");
 
             // Assert
             Assert.AreEqual("Ok!!", result);
@@ -33,7 +33,7 @@ namespace HelloVin.Tests.Controllers
             CheckVinController controller = new CheckVinController();
 
             // Act
-            string result = controller.Get("123");
+            var result = controller.Get("123");
 
             // Assert
             Assert.AreEqual("Not Ok!", result);
