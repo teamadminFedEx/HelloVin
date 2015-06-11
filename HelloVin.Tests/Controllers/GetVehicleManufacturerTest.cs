@@ -7,12 +7,12 @@ namespace HelloVin.Tests.Controllers
     [TestFixture]
     public class GetVehicleManufacturerTest
     {
-        private GetVehicleManufacturerController _controller;
+        private VehicleManufacturerController _controller;
 
         [SetUp]
         public void SetUp()
         {
-            _controller = new GetVehicleManufacturerController();
+            _controller = new VehicleManufacturerController();
         }
         [Test]
         public void ShouldRecognizeSwedishScaniaVin()
