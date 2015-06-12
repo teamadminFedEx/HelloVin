@@ -38,10 +38,14 @@ namespace HelloVin.Models.Properties
         public IVehicleProperty GetVehicleProperty(string Vin)
         {
             var modelYearIdentifier = Vin.Substring(9, 1).ToUpper();
-            var value = "Unknown";
+            string value = "";
 
-            _modelYearDictionary.TryGetValue(modelYearIdentifier, out value);
-            return new BaseProperty("ModelYear", value);            
+            if (!_modelYearDictionary.TryGetValue(modelYearIdentifier, out value))
+            {
+                value = "Unknown";
+            }
+
+            return new BaseProperty("ModelYear", value);
         }
     }
 }
