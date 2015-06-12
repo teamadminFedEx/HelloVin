@@ -6,16 +6,13 @@ namespace HelloVin.Models
 {
     public class VehicleInformation
     {
-        private IEnumerable<IVehiclePropertyGenerator> _vehicleProperties;
+        public IEnumerable<IVehicleProperty> VehicleProperties;
 
-        public VehicleInformation(IEnumerable<IVehiclePropertyGenerator> vehicleProperties)
+        public VehicleInformation(IEnumerable<IVehiclePropertyGenerator> propertyGenerators, string Vin)
         {
-            _vehicleProperties = vehicleProperties;
+            VehicleProperties = propertyGenerators.Select(x => x.GetVehicleProperty(Vin));
         }
 
-        public IEnumerable<IVehicleProperty> Get(string Vin)
-        {
-           return _vehicleProperties.Select(x => x.GetVehicleProperty(Vin));
-        } 
+
     }
 }
