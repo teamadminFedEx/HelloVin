@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using HelloVin.Interfaces;
 using HelloVin.Models;
-using HelloVin.Models.Properties;
+using HelloVin.Models.PropertyGenerator;
 using NUnit.Framework;
 
 namespace HelloVin.Tests.Controllers
@@ -16,18 +15,17 @@ namespace HelloVin.Tests.Controllers
         {
             // Arrange
             var testVin = "YS2" + "123456789ABCDE";
-            var propertyList = new List<IVehiclePropertyGenerator>()
+            var propertyList = new List<IVehiclePropertyGenerator>
             {
                 new ManufacturerProperty(),
-                new VehicleTypeProperty()
+                new VehicleTypeProperty(),
+                new CountryProperty()
             };
             var vehicleInformation = new VehicleInformation(propertyList, testVin);
             // act
             var result = vehicleInformation.VehicleProperties;
             // Assert
             Assert.AreEqual(result.Count(), propertyList.Count());
-
         }
-
     }
 }

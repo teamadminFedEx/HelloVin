@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using HelloVin.Interfaces;
 using HelloVin.Models;
-using HelloVin.Models.Properties;
+using HelloVin.Models.PropertyGenerator;
 
 namespace HelloVin.Controllers
 {
@@ -15,10 +11,11 @@ namespace HelloVin.Controllers
 
         public VehicleInformation Get(string id)
         {
-            var propertyList = new List<IVehiclePropertyGenerator>()
+            var propertyList = new List<IVehiclePropertyGenerator>
             {
                 new ManufacturerProperty(),
-                new VehicleTypeProperty()
+                new VehicleTypeProperty(),
+                new CountryProperty()
             };
             return (new VehicleInformation(propertyList, id));
         }

@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Web.UI.WebControls;
 using HelloVin.Interfaces;
 using HelloVin.Models.Enums;
 
-namespace HelloVin.Models.Properties
+namespace HelloVin.Models.PropertyGenerator
 {
     public class ManufacturerProperty : IVehiclePropertyGenerator
     {
@@ -15,13 +14,11 @@ namespace HelloVin.Models.Properties
             "VLU"
         };
 
-        public IVehicleProperty GetVehicleProperty(string Vin)
+        public IVehicleProperty GetVehicleProperty(string vin)
         {
-            
-
             var value = VehicleManufacturer.Unknown;
 
-            var toCheck = Vin.Substring(0, 3).ToUpper();
+            var toCheck = vin.Substring(0, 3).ToUpper();
             if (ScaniaVin.Contains(toCheck))
             {
                 value = VehicleManufacturer.Scania;
