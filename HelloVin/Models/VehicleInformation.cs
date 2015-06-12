@@ -8,9 +8,9 @@ namespace HelloVin.Models
     {
         public IEnumerable<IVehicleProperty> VehicleProperties;
 
-        public VehicleInformation(IEnumerable<IVehiclePropertyGenerator> propertyGenerators, string Vin)
+        public VehicleInformation(IEnumerable<IVehiclePropertyGenerator> propertyGenerators, string vin)
         {
-            VehicleProperties = propertyGenerators.Select(x => x.GetVehicleProperty(Vin));
+            VehicleProperties = propertyGenerators.Select(x => x.GetVehicleProperty(vin));
         }
 
 

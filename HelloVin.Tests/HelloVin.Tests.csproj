@@ -143,6 +143,7 @@
     <Compile Include="Controllers\CheckVinControllerTest.cs" />
     <Compile Include="Controllers\VehicleInformationTest.cs" />
     <Compile Include="Controllers\GetVehicleManufacturerTest.cs" />
+    <Compile Include="Models\PropertyGenerator\CountryPropertyGeneratorTest.cs" />
     <Compile Include="Models\PropertyGenerator\ManufacturerPropertyGeneratorTest.cs" />
     <Compile Include="Models\PropertyGenerator\PropertyGeneratorTests.cs" />
     <Compile Include="Models\VinCheckerTest.cs" />

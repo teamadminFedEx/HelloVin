@@ -1,4 +1,4 @@
-﻿using HelloVin.Models.Properties;
+﻿using HelloVin.Models.PropertyGenerator;
 using NUnit.Framework;
 
 namespace HelloVin.Tests.Models.PropertyGenerator

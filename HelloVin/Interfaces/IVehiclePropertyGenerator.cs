@@ -2,6 +2,6 @@
 {
     public interface IVehiclePropertyGenerator
     {
-        IVehicleProperty GetVehicleProperty(string Vin);
+        IVehicleProperty GetVehicleProperty(string vin);
     }
 }
