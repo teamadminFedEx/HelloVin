@@ -7,9 +7,9 @@ namespace HelloVin.Tests.Models.PropertyGenerator
     public class PropertyGeneratorTests
     {
         [Test]
-        public void ManufacturerProperty_DetectsScania()
+        public void ManufacturerProperty_DetectsScania([Values("YS2","YS4","VLU","9BS")] string id)
         {
-            var testVin = "YS2" + "123456789ABCDE";
+            var testVin = id + "123456789ABCDE";
             var manufacturerproperty = new ManufacturerProperty();
             var result = manufacturerproperty.GetVehicleProperty(testVin);
 
@@ -57,8 +57,8 @@ namespace HelloVin.Tests.Models.PropertyGenerator
             var manufacturerproperty = new VehicleTypeProperty();
             var result = manufacturerproperty.GetVehicleProperty(testVin);
 
-            Assert.AreEqual(result.Property, "VehicleType");
-            Assert.AreEqual(result.Value, "Truck");
+            Assert.AreEqual("VehicleType", result.Property);
+            Assert.AreEqual("Truck", result.Value);
         }
     }
 }
