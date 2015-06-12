@@ -58,7 +58,7 @@ namespace HelloVin.Tests.Models.PropertyGenerator
             var result = manufacturerproperty.GetVehicleProperty(testVin);
 
             Assert.AreEqual(result.Property, "VehicleType");
-            Assert.AreEqual(result.Value, "Bus");
+            Assert.AreEqual(result.Value, "Truck");
         }
     }
 }
