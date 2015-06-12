@@ -1,4 +1,8 @@
-﻿using HelloVin.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using HelloVin.Interfaces;
 
 namespace HelloVin.Models
 {
