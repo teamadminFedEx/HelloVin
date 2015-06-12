@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using HelloVin.Interfaces;
-using HelloVin.Models.Enums;
 
-namespace HelloVin.Models.Properties
+namespace HelloVin.Models.PropertyGenerator
 {
     public class ModelYearProperty : IVehiclePropertyGenerator
     {
