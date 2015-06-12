@@ -45,5 +45,18 @@ namespace HelloVin.Tests.Models.PropertyGenerator
             c = (char) ('W' + 1);
             yield return "Y" + c;
         }
+
+        [Test]
+        public void CountryProperty_ShouldDetectSwedenCaseInsensitive()
+        {
+            string testVin = "ys2";
+
+            var countryProperty = new CountryProperty();
+            IVehicleProperty property = countryProperty.GetVehicleProperty(testVin);
+
+            Assert.That(property.Property, Is.EqualTo("Country"));
+            Assert.That(property.Value, Is.EqualTo("Sweden"));
+        }
+
     }
 }

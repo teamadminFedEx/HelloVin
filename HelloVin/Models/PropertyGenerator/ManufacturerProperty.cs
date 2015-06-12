@@ -14,6 +14,39 @@ namespace HelloVin.Models.PropertyGenerator
             "VLU"
         };
 
+        public List<string> VolvoVin = new List<string>
+        {
+            "YV1",
+            "YV2",
+            "YV3",
+            "YV4",
+            "4V1", 
+            "4V2", 
+            "4V3", 
+            "4V4", 
+            "4V5", 
+            "4V6", 
+            "4VL", 
+            "4VM", 
+            "4VZ"
+        };
+        public List<string> RenaultVin = new List<string>
+        {
+            "8A1",
+            "93Y", 
+            "9FB", 
+            "KNM", 
+            "L56", 
+            "VF1", 
+            "VF6"
+        };
+
+        public List<string> ManVin = new List<string>
+        {
+            "LZM", 
+            "WMA"
+        };
+
         public IVehicleProperty GetVehicleProperty(string vin)
         {
             var value = VehicleManufacturer.Unknown;
@@ -22,6 +55,18 @@ namespace HelloVin.Models.PropertyGenerator
             if (ScaniaVin.Contains(toCheck))
             {
                 value = VehicleManufacturer.Scania;
+            }
+            else if (VolvoVin.Contains(toCheck))
+            {
+                value = VehicleManufacturer.Volvo;
+            }
+            else if (RenaultVin.Contains(toCheck))
+            {
+                value = VehicleManufacturer.Renault;
+            }
+            else if (ManVin.Contains(toCheck))
+            {
+                value = VehicleManufacturer.Man;
             }
             
             return new BaseProperty("Manufacturer", value.ToString());

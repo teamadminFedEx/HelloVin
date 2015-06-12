@@ -20,7 +20,7 @@ namespace HelloVin.Models.PropertyGenerator
 
         private string GetCountry(string vin)
         {
-            string country = vin.Substring(0, 2);
+            string country = vin.ToUpperInvariant().Substring(0, 2);
             switch (country)
             {
                 case "YS":
