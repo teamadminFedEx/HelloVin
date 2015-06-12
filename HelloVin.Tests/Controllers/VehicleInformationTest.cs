@@ -21,9 +21,9 @@ namespace HelloVin.Tests.Controllers
                 new ManufacturerProperty(),
                 new VehicleTypeProperty()
             };
-            var vehicleInformation = new VehicleInformation(propertyList);
+            var vehicleInformation = new VehicleInformation(propertyList, testVin);
             // act
-            var result = vehicleInformation.Get(testVin);
+            var result = vehicleInformation.VehicleProperties;
             // Assert
             Assert.AreEqual(result.Count(), propertyList.Count());
 
