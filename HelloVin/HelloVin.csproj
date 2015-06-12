@@ -207,6 +207,7 @@
     <Compile Include="Interfaces\IVinRule.cs" />
     <Compile Include="Models\Enums\VehicleManufacturer.cs" />
     <Compile Include="Models\Enums\VehicleType.cs" />
+    <Compile Include="Models\PropertyGenerator\ModelYearProperty.cs" />
     <Compile Include="Models\PropertyGenerator\ManufacturerProperty.cs" />
     <Compile Include="Models\PropertyGenerator\VehicleTypeProperty.cs" />
     <Compile Include="Models\VehicleInformation.cs" />

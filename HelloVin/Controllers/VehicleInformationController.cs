@@ -18,7 +18,8 @@ namespace HelloVin.Controllers
             var propertyList = new List<IVehiclePropertyGenerator>()
             {
                 new ManufacturerProperty(),
-                new VehicleTypeProperty()
+                new VehicleTypeProperty(),
+                new ModelYearProperty()
             };
             return (new VehicleInformation(propertyList, id));
         }

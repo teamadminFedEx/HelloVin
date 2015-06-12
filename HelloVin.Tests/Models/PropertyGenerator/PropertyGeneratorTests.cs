@@ -60,5 +60,16 @@ namespace HelloVin.Tests.Models.PropertyGenerator
             Assert.AreEqual(result.Property, "VehicleType");
             Assert.AreEqual(result.Value, "Truck");
         }
+
+        [Test]
+        public void ModelYearProperty_Detects2000()
+        {
+            var testVin = "YS2" + "123456089ABCDE";
+            var modelyearproperty = new ModelYearProperty();
+            var result = modelyearproperty.GetVehicleProperty(testVin);
+
+            Assert.AreEqual(result.Property, "ModelYear");
+            Assert.AreEqual(result.Value, "2000");
+        }
     }
 }
