@@ -15,6 +15,23 @@ namespace HelloVin.Models.Properties
             "VLU"
         };
 
+        public List<string> VolvoVin = new List<string>
+        {
+            "YV1",
+            "YV2",
+            "YV3",
+            "YV4",
+            "4V1", 
+            "4V2", 
+            "4V3", 
+            "4V4", 
+            "4V5", 
+            "4V6", 
+            "4VL", 
+            "4VM", 
+            "4VZ"
+        };
+
         public IVehicleProperty GetVehicleProperty(string Vin)
         {
             
@@ -23,6 +40,10 @@ namespace HelloVin.Models.Properties
 
             var toCheck = Vin.Substring(0, 3).ToUpper();
             if (ScaniaVin.Contains(toCheck))
+            {
+                value = VehicleManufacturer.Scania;
+            }
+            else if (VolvoVin.Contains(toCheck))
             {
                 value = VehicleManufacturer.Scania;
             }
