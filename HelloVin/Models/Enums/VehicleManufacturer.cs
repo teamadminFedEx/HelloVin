@@ -3,6 +3,9 @@
     public enum VehicleManufacturer
     {
         Scania,
+        Volvo,
+        Renault,
+        Man,
         Unknown
     }
 }
