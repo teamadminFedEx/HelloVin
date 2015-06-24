@@ -15,7 +15,8 @@ namespace HelloVin.Controllers
             {
                 new ManufacturerProperty(),
                 new VehicleTypeProperty(),
-                new CountryProperty()
+                new CountryProperty(),
+                new ModelYearProperty()
             };
             return (new VehicleInformation(propertyList, id));
         }
