@@ -47,6 +47,12 @@ namespace HelloVin.Models.PropertyGenerator
             "WMA"
         };
 
+        public List<string> IvecoVin = new List<string>
+        {
+            "XLR", 
+            "XLV"
+        };
+
         public IVehicleProperty GetVehicleProperty(string vin)
         {
             var value = VehicleManufacturer.Unknown;
@@ -67,6 +73,10 @@ namespace HelloVin.Models.PropertyGenerator
             else if (ManVin.Contains(toCheck))
             {
                 value = VehicleManufacturer.Man;
+            }
+            else if (IvecoVin.Contains(toCheck))
+            {
+                value = VehicleManufacturer.Iveco;
             }
             
             return new BaseProperty("Manufacturer", value.ToString());

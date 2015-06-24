@@ -6,6 +6,7 @@
         Volvo,
         Renault,
         Man,
-        Unknown
+        Unknown,
+        Iveco
     }
 }

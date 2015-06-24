@@ -50,6 +50,18 @@ namespace HelloVin.Tests.Models.PropertyGenerator
             Assert.AreEqual(result.Property, "Manufacturer");
             Assert.AreEqual(result.Value, "Man");
         }
+
+        [Test]
+        public void ManufacturerProperty_DetectsIveco([Values("XLR", "XLV")] string id)
+        {
+            var testVin = id + "123456789ABCDE";
+            var manufacturerproperty = new ManufacturerProperty();
+            var result = manufacturerproperty.GetVehicleProperty(testVin);
+
+            Assert.AreEqual(result.Property, "Manufacturer");
+            Assert.AreEqual(result.Value, "Iveco");
+        }
+
         [Test]
         public void ManufacturerProperty_DefaultsUnknown()
         {
